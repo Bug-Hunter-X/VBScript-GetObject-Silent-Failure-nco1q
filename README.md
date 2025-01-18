@@ -1,0 +1,3 @@
+This repository demonstrates a common but subtle error in VBScript: the silent failure of the GetObject function.  When GetObject fails to retrieve an object (e.g., because the object library isn't installed or the path is incorrect), it returns Nothing without raising an error. This can lead to difficult-to-track bugs later in your script.
+
+The `bug.vbs` file shows the problematic code, while `bugSolution.vbs` provides a corrected version that explicitly checks for errors and handles them gracefully.  Always check the return value of GetObject() to avoid these silent failures.
